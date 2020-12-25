@@ -28,7 +28,7 @@ BDEPEND="app-text/dos2unix"
 src_compile() {
 	emake \
 		-DNODTAPI \
-		$( if ! use srt; then echo "-DNOSRT"; fi ) \
-		$( if ! use pcsc; then echo "-DNOPCSC"; fi ) \
+		$( if ! use srt; then echo "NOSRT=1"; fi ) \
+		$( if ! use pcsc; then echo "NOPCSC=1"; fi ) \
 		all
 }
