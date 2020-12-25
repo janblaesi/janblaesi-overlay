@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jan@blaesi.com</email>
+		<name>Jan Blaesi</name>
+	</maintainer>
+	<use>
+		<flag name="srt">Build with support for Haivision SRT (Secure Reliable Transport)</flag>
+	</use>
+</pkgmetadata>

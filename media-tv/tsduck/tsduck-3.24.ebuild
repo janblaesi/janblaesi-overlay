@@ -14,22 +14,25 @@ SRC_URI="https://github.com/tsduck/tsduck/archive/v${MY_PV}.tar.gz"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="+curl doc +pcsc srt"
+IUSE="+curl doc smartcard srt +teletext"
 
 DEPEND="curl? ( net-misc/curl )
-	doc? ( app-doc/doxygen )
-	doc? ( media-gfx/graphviz )
-	pcsc? ( sys-apps/pcsc-lite )
+	smartcard? ( sys-apps/pcsc-lite )
 	srt? ( net-libs/srt )
 	dev-lang/python"
 RDEPEND="${DEPEND}"
-BDEPEND="app-text/dos2unix"
+BDEPEND="app-text/dos2unix
+	doc? ( app-doc/doxygen )
+	doc? ( media-gfx/graphviz )"
 
 src_compile() {
 	emake \
+		NOTEST=1 \
 		NODTAPI=1 \
+		$( if ! use curl; then echo "NOCURL=1"; fi ) \
+		$( if ! use smartcard; then echo "NOPCSC=1"; fi ) \
 		$( if ! use srt; then echo "NOSRT=1"; fi ) \
-		$( if ! use pcsc; then echo "NOPCSC=1"; fi )
+		$( if ! use teletext; then echo "NOTELETEXT=1"; fi )
 }
 
 src_install() {
