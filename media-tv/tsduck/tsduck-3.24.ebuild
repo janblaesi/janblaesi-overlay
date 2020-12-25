@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="sys-devel/gcc
-	app-test/dos2unix
+	app-text/dos2unix
 	net-misc/curl
 	app-arch/tar
 	app-arch/zip
