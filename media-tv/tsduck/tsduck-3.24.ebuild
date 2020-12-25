@@ -25,3 +25,10 @@ DEPEND="curl? ( net-misc/curl )
 RDEPEND="${DEPEND}"
 BDEPEND="app-text/dos2unix"
 
+src_compile() {
+	emake \
+		-DNODTAPI \
+		$( if ! use srt; then echo "-DNOSRT"; fi ) \
+		$( if ! use pcsc; then echo "-DNOPCSC"; fi ) \
+		all
+}
