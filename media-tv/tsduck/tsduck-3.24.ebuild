@@ -31,3 +31,7 @@ src_compile() {
 		$( if ! use srt; then echo "NOSRT=1"; fi ) \
 		$( if ! use pcsc; then echo "NOPCSC=1"; fi )
 }
+
+src_install() {
+	emake install SYSPREFIX="${D}"
+}
