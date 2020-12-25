@@ -33,9 +33,9 @@ src_compile() {
 }
 
 src_install() {
-	emake SYSPREFIX="${D}" install
+	emake SYSPREFIX="${D}/usr" install
 
 	if use doc; then
-		emake SYSPREFIX="${D}" doxygen
+		emake SYSPREFIX="${D}/usr" doxygen
 	fi
 }
