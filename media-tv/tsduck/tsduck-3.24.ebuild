@@ -14,15 +14,14 @@ SRC_URI="https://github.com/tsduck/tsduck/archive/v${MY_PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="curl doc pcsc srt"
+IUSE="+curl doc +pcsc srt"
 
-DEPEND="app-text/dos2unix
-	curl? ( net-misc/curl )
+DEPEND="curl? ( net-misc/curl )
 	doc? ( app-doc/doxygen )
 	doc? ( media-gfx/graphviz )
 	pcsc? ( sys-apps/pcsc-lite )
 	srt? ( net-libs/srt )
 	dev-lang/python"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="app-text/dos2unix"
 
