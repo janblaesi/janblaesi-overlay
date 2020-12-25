@@ -6,7 +6,7 @@
 		<name>Jan Blaesi</name>
 	</maintainer>
 	<use>
-		<flag name="srt">Build with support for Haivision SRT (Secure Reliable Transport)</flag>
-		<flag name="teletext">Build with teletext support</flag>
+		<flag name="srt">Enable Haivision SRT (Secure Reliable Transport) support</flag>
+		<flag name="teletext">Enable teletext support</flag>
 	</use>
 </pkgmetadata>
