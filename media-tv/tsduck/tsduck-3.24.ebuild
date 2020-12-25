@@ -9,7 +9,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="TSDuck is an extensible toolkit for MPEG Transport Streams"
 HOMEPAGE="https://tsduck.io"
-SRC_URI="https://github.com/tsduck/tsduck/releases/v${MY_PV}.tar.gz"
+SRC_URI="https://github.com/tsduck/tsduck/archive/v${MY_PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
