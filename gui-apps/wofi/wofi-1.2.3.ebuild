@@ -3,13 +3,12 @@
 
 EAPI=7
 
+inherit mercurial meson
+
 DESCRIPTION="Wofi is a launcher/menu program for wlroots based wayland compositors"
 HOMEPAGE="https://hg.sr.ht/~scoopta/wofi"
-
-EHG_REPO_URL="${HOMEPAGE}"
+EHG_REPO_URI="${HOMEPAGE}"
 EHG_REVISION="v${PV}"
-
-inherit mercurial meson
 
 LICENSE="GPL-3"
 SLOT="0"
