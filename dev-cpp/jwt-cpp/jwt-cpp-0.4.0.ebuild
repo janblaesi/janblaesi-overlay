@@ -23,10 +23,8 @@ BDEPEND=""
 
 src_configure() {
 	local mycmakeargs=(
-		-DJWT_BUILD_EXAMPLES=OFF
-		-DJWT_BUILD_TESTS=OFF
-		-DJWT_ENABLE_COVERAGE=OFF
-		-DJWT_EXTERNAL_PICOJSON=ON
+		-DBUILD_TESTS=OFF
+		-DEXTERNAL_PICOJSON=ON
 	)
 
 	cmake_src_configure
