@@ -10,6 +10,7 @@ HOMEPAGE="https://github.com/microsoft/cpprestsdk"
 EGIT_REPO_URI="https://github.com/microsoft/cpprestsdk"
 EGIT_CLONE_TYPE="shallow"
 EGIT_COMMIT="${PV}"
+EGIT_SUBMODULES=()
 
 LICENSE="MIT"
 SLOT="0"
