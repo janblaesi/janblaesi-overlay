@@ -16,15 +16,13 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-libs/openssl
-dev-cpp/picojson"
+DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_TESTS=OFF
-		-DEXTERNAL_PICOJSON=ON
 	)
 
 	cmake_src_configure
