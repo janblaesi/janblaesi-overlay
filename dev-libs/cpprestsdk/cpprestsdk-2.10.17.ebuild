@@ -8,7 +8,7 @@ inherit git-r3 cmake
 DESCRIPTION="The C++ REST SDK is a Microsoft project for cloud-based communication."
 HOMEPAGE="https://github.com/microsoft/cpprestsdk"
 EGIT_REPO_URI="https://github.com/microsoft/cpprestsdk"
-EGIT_BRANCH="v${PV}"
+EGIT_BRANCH="${PV}"
 
 LICENSE="MIT"
 SLOT="0"
